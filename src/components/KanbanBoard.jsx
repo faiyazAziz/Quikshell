@@ -137,13 +137,14 @@ const KanbanBoard = ({ tickets, users, grouping, sortOptions }) => {
             <div className="group-title-left">
               <div className="user-profile">
                   <img src={STATUS_ICONS[group]} style={{height:"20px",width:"20px",borderRadius:"50%",objectFit:"cover"}}></img>
+                  {grouping === "user" && <span className={`user-badge ${users.find((u) => u.id === group)?.available ? "available" : "non-available"}`}></span>}
               </div>
-
               <div className="group-title">
               {grouping === "user"
               ? users.find((u) => u.id === group)?.name
               : group}
               </div>
+              <div>{(groupedTickets[group] || []).length}</div>
             </div>
             <div className="group-title-right">
               <img src={addIcon}></img>

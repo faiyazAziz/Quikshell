@@ -36,6 +36,7 @@
     gap: 10px;
     font-size: 14px;
     color:#676666;
+    z-index: 1;
   }
 
  .filter-section{
@@ -57,6 +58,11 @@
 
  option{
     color: #676666;
+ }
+
+ option:focus{
+    outline: none;
+    background-color: rgb(84, 82, 82);
  }
   
   
