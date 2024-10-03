@@ -75,16 +75,16 @@
 
 @media (max-width: 1200px) {
     .kanban-board {
-        flex-direction: column; /* Switch to vertical layout */
+        /* flex-direction: column; Switch to vertical layout */
         height: auto; /* Adjust height for content wrapping */
     }
 
     .group-header {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .group-title {
-        font-size: 16px;
+        font-size: 13px;
     }
 }
 
@@ -98,7 +98,7 @@
 
     .kanban-group {
         flex-direction: column;
-        width: 100%; /* Full width for each group */
+        width: 90%; /* Full width for each group */
     }
 
     .group-header {
@@ -121,12 +121,12 @@
     }
 
     .group-title {
-        font-size: 12px;
+        font-size: 14px;
         margin-bottom: 10px;
     }
 
     .group-header {
-        font-size: 10px;
+        font-size: 14px;
     }
 }
 
@@ -141,11 +141,11 @@
     }
 
     .group-title {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .group-header {
-        font-size: 8px;
+        font-size: 12px;
     }
 }
 
