@@ -7,8 +7,8 @@ import KanbanBoard from "./components/KanbanBoard";
 function App() {
   const [tickets, setTickets] = useState([]);
   const [users, setUsers] = useState([]);
-  const [grouping, setGrouping] = useState("status");
-  const [sortOptions, setSortOptions] = useState("");
+  const [grouping, setGrouping] = useState(localStorage.getItem('grouping') || "status");
+  const [sortOptions, setSortOptions] = useState(localStorage.getItem('sortOptions') || "");
 
   useEffect(() => {
     const fetchData = async () => {

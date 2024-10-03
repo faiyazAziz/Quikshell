@@ -57,7 +57,7 @@ const TicketCard = ({ ticket, statusIcon, priorityIcon, userIcon, users }) => {
   return (
     <div className="ticket-card">
       <div className="card-top">
-        <div>{ticket.id}</div>
+        <div style={{fontWeight:"500"}}>{ticket.id}</div>
         <div>
           {!userIcon && (
             <div className="user-container">

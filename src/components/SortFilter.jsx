@@ -1,14 +1,24 @@
-/* eslint react/prop-types: 0 */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SortFilter.css";
 import filterIcon from '../assets/Display.svg';
 
 const SortFilter = ({ grouping, setGrouping, sortOptions, setSortOptions }) => {
   const [isVisible, setIsVisible] = useState(false);
+  // const [grouping, setGrouping] = useState(localStorage.getItem('grouping') || "status");
+  // const [sortOptions, setSortOptions] = useState(localStorage.getItem('sortOptions') || "");
 
   const toggleVisibility = () => {
     setIsVisible((prev) => !prev);
   };
+
+  useEffect(() => {
+    localStorage.setItem('grouping', grouping);
+  }, [grouping]);
+
+  useEffect(() => {
+    localStorage.setItem('sortOptions', sortOptions);
+  }, [sortOptions]);
+
   return (
     <div className="header">
       <button className="btn" onClick={toggleVisibility}>
